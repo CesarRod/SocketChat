@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:controller="sample.Controller" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #AAE0ED;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXTextArea fx:id="textAreaChat" editable="false" focusColor="#4f6fd199" layoutX="24.0" layoutY="39.0" prefHeight="244.0" prefWidth="552.0" style="-fx-background-color: #FFFFFF;" text="Esperando...">
+         <cursor>
+            <Cursor fx:constant="NONE" />
+         </cursor>
+         <font>
+            <Font name="Candara" size="12.0" />
+         </font>
+      </JFXTextArea>
+      <JFXTextArea  fx:id="textAreaMessage" focusColor="#8fa5e0" layoutX="24.0" layoutY="301.0" prefHeight="75.0" prefWidth="454.0" style="-fx-background-color: #4ECDC4;" unFocusColor="#a888e4" />
+      <JFXButton fx:id="sendButton" onAction="#sendMessage" layoutX="488.0" layoutY="321.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="98.0" ripplerFill="#0cf200" style="-fx-background-color: #93827F;" text="Enviar" textFill="#f1f2f0" />
+      <MenuBar layoutY="2.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Empezar Chat" fx:id="startButton" onAction="#connect" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Herramientas">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Cambiar Nickname" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</Pane>
